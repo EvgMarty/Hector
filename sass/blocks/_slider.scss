@@ -1,0 +1,159 @@
+//Слайдер
+
+.slider {
+   position: relative;
+   max-width: 100%;
+   overflow: hidden;
+}
+
+.slider-line {
+   position: relative;
+   transition: all .3s ease-in;
+   left: 0;
+
+   height: 100%;
+   width: 400%;
+
+   display: flex;
+}
+
+.slider-content {
+   height: 100%;
+   width: 100%;
+
+   display: flex;
+}
+
+.slider-content__info {
+   width: 50%;
+
+   padding: 150px 80px 150px;
+
+   p{
+      color: $black;
+      font-family:$montser;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 1.68px;
+
+      margin-top: 22px;
+      margin-bottom: 50px;
+
+      @media (max-width: 920px) {
+         font-size: 16px;
+         margin-bottom: 40px;
+      }
+
+      @media (min-width: 1920px) {
+        font-size: 24px;
+      }
+   }
+
+
+   @media (max-width: 920px) {
+      padding: 145px 40px 145px;
+   }
+
+   @media (max-width: 600px) {
+      padding: 50px 20px 20px;
+   }
+
+   @media (min-width: 1920px) {
+      padding: 200px 90px 200px;
+      margin-bottom: 60px;
+   }
+}
+
+.slider-content__img {
+   width: 50%;
+   position: relative;
+
+   img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;      
+   }
+}
+
+.slider-dots {
+   position: absolute;
+   bottom: 82px;
+   right: 0;
+
+   @media (max-width: 920px) {
+      bottom: 60px;
+   }
+
+   @media (max-width: 600px) {
+      bottom: 40px;
+   }
+
+   @media (max-width: 400px) {
+      bottom: 20px;
+   }
+}
+
+.dot {
+   cursor: pointer;
+   position: relative;
+
+   color: #CECECE;
+   text-align: right;
+   font-family: $montser;
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: normal;
+   letter-spacing: 2.52px;
+
+   transition: all .2s ease-in;
+
+   @media (max-width: 920px) {
+      font-size: 24px;
+   }
+
+   @media (max-width: 600px) {
+      font-size: 18px;
+   }
+
+   &:hover{
+      color: $black;
+   }
+
+   &.dot--active{
+      color: $black;
+      text-align: right;
+      font-family:  $montser;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 4.48px;
+
+      @media (max-width: 920px) {
+         font-size: 46px;
+      }
+
+      @media (max-width: 600px) {
+         font-size:36px;
+      }
+
+      &::before{
+         content: '';
+         display: inline-block;
+         vertical-align: middle;
+         margin-right: 12px;
+         width: 38px;
+         height: 4px;
+         background: $black;
+      }
+   }
+}
+

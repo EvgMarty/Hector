@@ -1,0 +1,17 @@
+//Затемняющий блок
+.fade-block{
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(4px);
+   z-index: 10;
+
+   &.hidden{
+      display: none;
+   }
+}

@@ -1,0 +1,17 @@
+body{
+   font-family: $montser;
+}
+
+.container{
+   max-width: 1300px;
+   margin: 0 auto;
+
+   @media (min-width: 1400px) {
+      max-width: 1300px;
+   }
+
+   @media (min-width: 1920px) {
+      max-width: 1680px;
+   }
+}
+

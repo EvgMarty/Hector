@@ -1,0 +1,56 @@
+h1,h2,h3,h4,h5,h6{
+   color: $black;
+   font-family: $montser; 
+   font-style: normal;
+   line-height: normal;
+}
+
+h1{
+   font-size: 86px;
+   font-weight: 900;
+   line-height: 100%; /* 96px */
+   letter-spacing: 6.72px;
+
+   @media (max-width: 920px) {
+      font-size: 68px;
+   }
+
+   @media (max-width: 600px) {
+      font-size: 58px;
+   }
+
+   @media (min-width: 1920px) {
+      font-size: 96px;
+   }
+}
+
+h2{
+
+}
+
+h3{
+   font-size: 36px;
+   font-weight: 700;
+   letter-spacing: 2.52px;
+}
+
+h4{
+   font-size: 24px;
+   font-weight: 700;
+   letter-spacing: 2.1px;
+
+   @media (max-width: 920px) {
+      font-size: 20px;
+   }
+
+
+   @media (min-width: 1920px) {
+      font-size: 30px;
+   }
+}
+
+h5{
+   font-size: 24px;
+   font-weight: 700;
+}
+

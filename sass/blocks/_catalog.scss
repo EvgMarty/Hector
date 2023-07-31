@@ -1,0 +1,138 @@
+.catalog-curtain{
+   position: absolute;
+   z-index: 5;
+   top: -2000px;
+
+   width: 100%;
+
+
+   background: $white;
+   box-shadow: 0px 102px 124px 0px rgba(0, 0, 0, 0.25);
+
+   transition: all .3s ease-in;
+
+   .container{
+      position: relative;
+      padding: 158px 0 0 0;
+   }
+
+   &.catalog-curtain--active{
+      top: 0;
+   }
+
+}
+
+.catalog {
+   position: absolute;
+   top: 0;
+   left: 150px;
+
+   width: 195px;
+   height: 90px; 
+
+   background: $black;
+   opacity: 0.5;
+
+   color: $white;
+
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   letter-spacing: 1.26px;
+   text-transform: uppercase;
+
+   text-align: center;
+   padding: 34px 0 0 0;
+
+   &::after{
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 11px;
+      margin-left: 9px;
+
+      background: url(../img/catalog/VectorW.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   @media (max-width: 920px) {
+      height: 80px; 
+      left: 25px;
+      padding: 28px 0 0 0;
+   }
+
+   @media (min-width: 1920px) {
+      height: 110px; 
+      padding: 40px 0 0 0;
+   }
+
+   
+}
+
+.tab-wrap {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 40px;
+   column-gap: 40px;
+   padding-bottom: 40px;
+
+   border-bottom: 1px solid $black;
+
+   .button{
+      width: 313px;
+      @media (max-width: 920px) {
+         width: 255px;
+      }
+
+      &.tab--active{
+         color: $white;
+         background: $black;
+      }
+   }
+
+   @media (max-width: 920px) {
+      padding-left: 25px;
+   }
+}
+
+.tab-content__wrap {
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 120px;
+
+   &.hidden{
+      display: none;
+   }
+}
+
+.tab-content {
+   padding: 30px 0 55px 0;
+
+   @media (max-width: 920px) {
+      padding-left: 25px;
+   }
+}
+
+.tab-content__list {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   padding-top: 20px;
+   li{
+      cursor: pointer;
+
+      color: #666;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      transition: all .2s ease-in;
+
+      &:hover{
+         opacity: 60%;
+      }
+   }
+}

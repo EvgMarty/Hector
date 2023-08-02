@@ -1,0 +1,50 @@
+//Подписки
+
+.subscription {
+   .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 35px;
+      row-gap: 35px;
+
+      padding: 70px 0;
+
+      @media (max-width: 450px) {
+         padding: 50px 10px;
+      }
+
+      h4{
+         max-width:460px ; 
+         
+         @media (max-width: 920px) {
+            max-width: 394px;
+         }
+      }
+
+   }
+}
+
+.subscription-social {
+   display: flex;
+   column-gap: 30px;
+}
+
+.subscription-social__icon {
+   img{
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: brightness(40%)
+   }
+
+   a{
+      transition: all .3s ease-in;
+
+      &:hover{
+         filter: brightness(20%)
+      }
+   }
+  
+}

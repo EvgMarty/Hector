@@ -5,6 +5,8 @@
 
    transition: all .2s ease-in;
 
+   text-transform: uppercase;
+
 
    color: $black;
    font-family: $montser;
@@ -18,6 +20,7 @@
       color: $white;
       background: $black;
    }
+
    &:active{
       top: 1px;
    }
@@ -31,5 +34,27 @@
       padding: 25px 90px 25px 90px;
       font-size: 18px;
    }
+
+   &.white{
+      color: $white;
+      border: 1px solid $white;
+
+      &:hover{
+         color: $black;
+         background: $white;
+      }
+   }
+
+   &.formBtn{
+      color:  $white;
+      background: $black;
+      padding: 20px 70px 20px 70px;
+
+      &:hover{
+         color:  $white;
+         filter: brightness(50%)
+      }
+   }
+   
 
 }

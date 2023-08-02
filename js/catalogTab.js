@@ -10,7 +10,7 @@ dataTabCatalog.forEach((item)=>{
 
       const tabContent = document.querySelector('#' + contentId);
 
-      // скрыть весе окна ктаб-контента
+      // скрыть весе окна таб-контента
       contentCatalog.forEach((item)=>{
          item.classList.add('hidden')
       })

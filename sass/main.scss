@@ -4,13 +4,18 @@
 @import "./base/base";
 
 //Blocks
-@import "./blocks/titles"; //Заголовки
 @import "./blocks/nav";  //Навигация
 @import "./blocks/catalog";  //Шторка каталого
 @import "./blocks/slider";  //Слайдер
 @import "./blocks/shares";  //Скидки и акции
+@import "./blocks/product";  //Товар
+@import "./blocks/article";  //Статьи
+@import "./blocks/subscription";  //Подписки
+@import "./blocks/footer";  //Подвал
 
 //Кнопки и елементы 
+@import "./blocks/titles"; //Заголовки
 @import "./blocks/closeBtn";  //Кнопка закрить
 @import "./blocks/fadeBlock";  //Затемняющий блок
 @import "./blocks/button";  //Кнопка
+@import "./blocks/forms";  //Форма

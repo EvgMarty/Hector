@@ -1,0 +1,117 @@
+// Подвал
+
+.footer {
+   background: $footer_bg;
+   color: $white;
+   .container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+      column-gap: 50px;
+      row-gap: 50px;
+
+      padding: 130px 0;
+
+      @media (max-width: 1150px) {
+         justify-content: center;
+      }
+
+      @media (max-width: 850px) {
+         padding: 100px 30px;
+      }
+
+      @media (max-width: 660px) {
+         text-align: center;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      &:before{
+         content: '';
+         display: block;
+         position: absolute;
+         top: 0;
+         right:0;
+         width: 100%;
+         height: 100%;
+         background-image: url(../../img/sliger/fon.svg);
+         background-size: 100% 275%;
+         background-repeat: no-repeat;
+         background-position: 0 170px;
+
+         @media (max-width: 920px) {
+            background-size: 100% 100%;
+         }
+      }
+   }
+}
+
+
+.footer__company-info {
+  h4{
+   color: $white;
+   text-transform: uppercase;
+  }
+}
+.footer__company-list {
+   margin-top: 50px;
+   color: rgba(255, 255, 255, 0.75);
+   font-family: Montserrat;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 40px; /* 250% */
+   letter-spacing: 1.12px;
+
+   
+   a:hover{
+      color: $white;
+   }
+   
+}
+
+.footer__contacts-number {
+   color: #FFF;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 50px; /* 166.667% */
+   letter-spacing: 2.1px;
+}
+.footer__contacts-networks {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 20px;
+   row-gap: 20px;
+
+   margin-top: 50px;
+  
+   li{
+      position: relative;
+      filter: brightness(70%);
+
+      &:hover{
+         filter: brightness(100%)
+      }
+
+      &:nth-child(3){
+      
+         &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 1px;
+            height: 25px;
+            background: rgba(196, 196, 196, 0.25);
+         }
+      }
+   }
+
+  
+}

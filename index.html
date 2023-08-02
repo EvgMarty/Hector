@@ -8,6 +8,7 @@
 </head>
 
 <body>
+   <!-- Голова -->
    <header class="hrader">
       <!-- Шторка каталога -->
       <div class="catalog-curtain">
@@ -267,7 +268,7 @@
                <button class="close-bnt" data-close="menu"></button>
             </ul>
             <div class="logo">
-               <img src="./img/logo/logo vector 1.svg" alt="">
+               <img src="./img/logo/logo.svg" alt="">
             </div>
             <ul class="nav-bar">
                <li class="nav-bar__item">
@@ -342,6 +343,7 @@
          </div>
       </div>
    </header>
+
    <!-- Скидки и акции -->
    <div class="shares">
       <div class="container">
@@ -375,12 +377,171 @@
       </div>
    </div> 
 
-  
+   <!-- Карточки с товаром  -->
+  <main class="main">
+   <div class="container">
+      <ul class="product__list">
+         <li class="product__list-tab product__list-tab--active" data-product="new">Новинки</li>
+         <li class="product__list-tab" data-product="top">ТОП продажів</li>
+         <li class="product__list-tab" data-product="discount">Знижки</li>
+      </ul>
+      <!-- Новинки -->
+      <div class="product__tab-content " id="new"  data-product-content>
+         <div class="product__tab-content__wrap">
+            <div class="product__card">NEWS</div>
+         </div>
+         <button class="button">Переглянути каталог</button>
+      </div>
+      <!-- ТОП продажів -->
+      <div class="product__tab-content hidden" id="top"data-product-content>
+         <div class="product__tab-content__wrap">
+            <div class="product__card">top</div>
+         </div>
+         <button class="button">Переглянути каталог</button>
+      </div>
+      <!-- Знижки -->
+      <div class="product__tab-content hidden" id="discount" data-product-content>
+         <div class="product__tab-content__wrap">
+            <div class="product__card">discount</div>
+         </div>
+         <button class="button">Переглянути каталог</button>
+      </div>
+   </div>
+  </main>
+
+   <!-- Статья  -->
+   <section class="article">
+      <div class="container">
+         <ul class="article__list" >
+            <li class="article__list-tab article__list-tab--active" data-article="news">Новинки</li>
+            <li class="article__list-tab" data-article="reviews">Знижки</li>
+         </ul>
+         <div class="article__wrap" id="news" data-article-content>
+            <div class="article__catd">
+               <h3>Тренди чоловічого одягу 2022</h3>
+               <p>Распродажа коллекций со скидками до 50%,
+                  доставка до вашего склада</p>
+               <button class="button white">Читати</button>
+            </div>
+            <div class="article__catd">
+               <h3>Тренди чоловічого одягу 2023</h3>
+               <p>Распродажа коллекций со скидками до 30%,
+                  доставка до вашего склада</p>
+               <button class="button white">Читати</button>
+            </div>
+         </div>
+         <div class="article__wrap hidden" id="reviews" data-article-content>
+            <div class="article__catd">
+               <h3>Тренди чоловічого одягу 2020</h3>
+               <p>Распродажа коллекций со скидками до 50%,
+                  доставка до вашего склада</p>
+               <button class="button white">Читати</button>
+            </div>
+            <div class="article__catd">
+               <h3>Тренди чоловічого одягу 2021</h3>
+               <p>Распродажа коллекций со скидками до 50%,
+                  доставка до вашего склада</p>
+               <button class="button white">Читати</button>
+            </div>
+         </div>
+         <button class="button">Більше новин</button>
+      </div>
+   </section>
+
+   <!-- Подписка  -->
+   <section class="subscription">
+      <div class="container">
+         <h4>Підпишись і стеж за новими надходженнями та акціями</h4>
+         <div class="subscription-social">
+            <div class="subscription-social__icon">
+               <a href=""><img src="./img/social/viber.svg" alt=""></a>
+            </div>
+            <div class="subscription-social__icon">
+               <a href=""><img src="./img/social/telegram.svg" alt=""></a>
+            </div>
+         </div>
+         <form class="subscription-form" action="/subscribe" method="post">
+            <div class="subscription-form__group">
+               <input class="subscription-form__input" type="tel" name="phone" pattern="\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" required>
+            </div>
+            <button class="button formBtn " type="submit">Підписатися</button>
+        </form>
+      </div>
+   </section>
+
+   <!-- Подвал  -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__logo">
+            <img src="./img/logo/logo_footer.svg" alt="">
+         </div>
+         <div class="footer__company-info">
+            <h4>Про компанію</h4>
+            <ul class="footer__company-list">
+               <li><a href="#">Доставка та оплата одягу</a></li>
+               <li><a href="#">Політика конфіденційності</a></li>
+               <li><a href="#">Опт</a></li>
+               <li><a href="#">Про Нас</a></li>
+            </ul>
+         </div>
+         <div class="footer__company-info">
+            <h4>Замовникам</h4>
+            <ul class="footer__company-list">
+               <li><a href="#">Особистий кабінет</a></li>
+               <li><a href="#">Історія замовлень</a></li>
+               <li><a href="#">Закладки</a></li>
+               <li><a href="#">Повернення товару</a></li>
+               <li><a href="#">Зворотній зв'язок</a></li>
+            </ul>
+         </div>
+         <div class="footer__contacts">
+            <ul class="footer__contacts-number">
+               <li><a href="tel:+380683460475">+38 (068) 346 04 75</a></li>
+               <li><a href="tel:+380664003814">+38 (066) 400 38 14</a></li>
+            </ul>
+
+            <ul class="footer__contacts-networks">
+               <li>
+                  <a href="#">
+                     <img src="./img/social/viber.svg" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="./img/social/telegram.svg" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="./img/social/whatsapp.svg" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="./img/social/mail.svg" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="./img/social/fb.svg" alt="">
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <img src="./img/social/instagram.svg" alt="">
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer>
 
    <script src="./js/menu.js"></script>
    <script src="./js/catalogCurtain.js"></script>
    <script src="./js/slider.js"></script>
    <script src="./js/catalogTab.js"></script>
+   <script src="./js/prodctTab.js"></script>
+   <script src="./js/articleTab.js"></script>
    <script src="./js/main.js"></script>
 </body>
 </html>

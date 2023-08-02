@@ -1,0 +1,140 @@
+//Статьи
+
+.article {
+   background: $white_smoke;
+   .container{
+      padding: 70px 0 ;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 1920px) {
+         padding: 95px 0 0 0;
+      }
+      @media (max-width: 920px) {
+         padding: 45px 0;
+      }
+   }
+}
+
+.article__list {
+   margin: 0 auto;
+   max-width: 450px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+   column-gap: 30px;
+   row-gap: 25px;
+
+   border-bottom: 1px solid $black;
+
+   @media (max-width: 920px) {
+      column-gap: 22px;
+   }
+}
+.article__list-tab {
+   cursor: pointer;
+   color: $dot;
+   font-family: $montser;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 1.26px;
+
+   padding: 0 25px  20px 25px;
+
+   border-bottom: 6px solid transparent ;
+   padding-bottom: 20px;
+
+
+   transition: all .2s ease-in;
+
+   &:hover{
+      color: $black;
+      border-bottom: 6px solid $black;
+   }
+
+   @media (max-width: 920px) {
+      font-size: 16px;
+   }
+
+   &.article__list-tab--active{
+      color: $black;
+      border-bottom: 6px solid $black;
+   }
+}
+
+.article__wrap {
+   padding: 60px 0 60px 0;
+
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   row-gap: 50px;
+   column-gap: 50px;
+   width: 100%;
+
+   @media (max-width: 920px) {
+      padding: 40px 0 40px 0;
+   }
+
+   &.hidden{
+      display: none;
+   }
+}
+.article__catd {
+   padding: 60px 50px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   row-gap: 20px;
+
+   max-width: 600px;
+
+   background: #5c5c5b;
+   position: relative;
+
+   transition: all .3s ease-in;
+
+   h3, p{
+      color: $white;
+      z-index: 1;
+   }
+
+   p{
+      font-size: 16px;
+      z-index: 1;
+   }
+
+   &::before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+
+      background-image: url(../../img/trends/trends.jfif);
+      background-size: 120%;
+      background-position: -40px 0;
+      filter: brightness(40%);
+      transition: all .3s ease-in;
+   }
+
+   &:hover::before{
+      background-size: 140%;
+      background-position: -70px -20px;
+      filter: brightness(20%);
+   }
+   &:hover{
+      background: #2e2e2d;
+   }
+}
+

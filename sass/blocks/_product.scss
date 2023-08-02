@@ -1,0 +1,87 @@
+// табы и продукт
+
+.main{
+   .container{
+      padding: 60px 0 0 0;
+
+      @media (min-width: 1920px) {
+         padding: 95px 0 0 0;
+      }
+      @media (max-width: 920px) {
+         padding: 45px 0;
+      }
+   }
+}
+.product__list {
+   margin: 0 auto;
+   max-width: 726px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+   column-gap: 122px;
+   row-gap: 25px;
+
+   border-bottom: 1px solid $black;
+
+   @media (max-width: 920px) {
+      column-gap: 5px;
+   }
+}
+
+.product__list-tab {
+   cursor: pointer;
+   color: $dot;
+   font-family: $montser;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 1.26px;
+   padding: 0 25px 20px 22px;
+
+   border-bottom: 6px solid transparent ;
+
+   transition: all .2s ease-in;
+
+   &:hover{
+      color: $black;
+      border-bottom: 6px solid $black;
+   }
+
+   @media (max-width: 920px) {
+      font-size: 16px;
+   }
+
+   &.product__list-tab--active{
+      color: $black;
+      border-bottom: 6px solid $black;
+   }
+}
+.product__tab-content {
+   padding: 60px 0 60px 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   &.hidden{
+      display: none;
+   }
+
+   @media (max-width: 900px) {
+      padding: 50px 0 50px 0;
+   }
+
+   @media (max-width: 600px) {
+      padding: 20px 0 20px 0;
+   }
+}
+
+.product__tab-content__wrap{
+   padding-bottom: 70px;
+
+}
+
+.product__card {
+   height: 500px;
+}

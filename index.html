@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body >
    <!-- Голова -->
    <header class="hrader">
       <!-- Шторка каталога -->
@@ -271,20 +271,19 @@
                <img src="./img/logo/logo.svg" alt="">
             </div>
             <ul class="nav-bar">
-               <li class="nav-bar__item">
-                  <img src="./img/icon/search.svg" alt="">
+               <li class="nav-bar__item" data-modal="search">
+                  <img class="no-pointer-events" src="./img/icon/search.svg" alt="">
                </li>
-               <li class="nav-bar__item">
-                  <img src="./img/icon/liked.svg" alt="">
+               <li class="nav-bar__item" data-modal="liked">
+                  <img class="no-pointer-events" src="./img/icon/liked.svg" alt="">
                </li>
-               <li class="nav-bar__item">
-                  <img src="./img/icon/basket.svg" alt="">
+               <li class="nav-bar__item" data-modal="basket">
+                  <img class="no-pointer-events" src="./img/icon/basket.svg" alt="">
                </li>
-               <li class="nav-bar__item">
-                  <img src="./img/icon/office.svg" alt="">
+               <li class="nav-bar__item" data-modal="office">
+                  <img class="no-pointer-events" src="./img/icon/office.svg" alt="">
                </li>
             </ul>
-            <div class="fade-block hidden" data-fade="menu"></div>
          </nav>
          <!-- слайдер -->
          <div class="slider">
@@ -387,22 +386,19 @@
       </ul>
       <!-- Новинки -->
       <div class="product__tab-content " id="new"  data-product-content>
-         <div class="product__tab-content__wrap">
-            <div class="product__card">NEWS</div>
+         <div class="product__tab-content__wrap" data-cardCategory="new">
          </div>
          <button class="button">Переглянути каталог</button>
       </div>
       <!-- ТОП продажів -->
       <div class="product__tab-content hidden" id="top"data-product-content>
-         <div class="product__tab-content__wrap">
-            <div class="product__card">top</div>
+         <div class="product__tab-content__wrap" data-cardCategory="top">
          </div>
          <button class="button">Переглянути каталог</button>
       </div>
       <!-- Знижки -->
       <div class="product__tab-content hidden" id="discount" data-product-content>
-         <div class="product__tab-content__wrap">
-            <div class="product__card">discount</div>
+         <div class="product__tab-content__wrap" data-cardCategory="discount">
          </div>
          <button class="button">Переглянути каталог</button>
       </div>
@@ -536,12 +532,80 @@
       </div>
    </footer>
 
+   <!-- Модалки   -->
+   <!-- Поиск   -->
+   <div class="modal-window hidden" id="search">
+      <div class="modal__name">Пошук</div>
+      <button class="close-bnt" data-close="modal"></button>
+      
+   </div>
+   <!-- Понрав   -->
+   <div class="modal-window hidden" id="liked">
+      <div class="modal__name">Сподобалося</div>
+      <button class="close-bnt" data-close="modal"></button>
+
+   </div>
+   <!-- Корзина  -->
+   <div class="modal-window hidden" id="basket">
+      <div class="modal__name">Кошик</div>
+      <button class="close-bnt" data-close="modal"></button>
+      <div class="basket">
+         <div class="basket__price">
+            <span class="all__price">500 <b>₴</b></span>
+            <button class="button btn-card">Оформити замовлення</button>
+         </div>
+         <div class="basket__card">
+            <div class="basket__card-img">
+               <img src="./img/catd/card.png" alt="">
+            </div>
+            <div class="basket__card-name">
+               <span>Футболка чоловіча Exclusive</span>
+            </div>
+            <div class="items ">
+               <div class="items__control" data-action="minus">-</div>
+               <div class="items__current" data-counter="">1</div>
+               <div class="items__control" data-action="plus">+</div>
+            </div>
+            <div class="price">
+               <div class="price__currency">285 <b>₴</b></div>
+             </div>
+         </div>
+         <div class="basket__card">
+            <div class="basket__card-img">
+               <img src="./img/catd/card.png" alt="">
+            </div>
+            <div class="basket__card-name">
+               <span>Футболка чоловіча Exclusive</span>
+            </div>
+            <div class="items ">
+               <div class="items__control" data-action="minus">-</div>
+               <div class="items__current" data-counter="">1</div>
+               <div class="items__control" data-action="plus">+</div>
+            </div>
+            <div class="price">
+               <div class="price__currency">285 <b>₴</b></div>
+             </div>
+         </div>
+      </div>
+   </div>
+   <!-- Регистрация   -->
+   <div class="modal-window hidden" id="office">
+      <div class="modal__name">Регестрація</div>
+      <button class="close-bnt" data-close="modal"></button>
+     
+   </div>
+
+   <!-- Затемняющий фон   -->
+   <div class="fade-block hidden" data-fade="menu"></div>
+
+   <script src="./js/productCardRender.js"></script>
    <script src="./js/menu.js"></script>
    <script src="./js/catalogCurtain.js"></script>
    <script src="./js/slider.js"></script>
    <script src="./js/catalogTab.js"></script>
    <script src="./js/prodctTab.js"></script>
    <script src="./js/articleTab.js"></script>
+   <script src="./js/modalWindow.js"></script>
    <script src="./js/main.js"></script>
 </body>
 </html>

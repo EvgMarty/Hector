@@ -1,0 +1,117 @@
+//Карточка товара 
+
+.product-card{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   row-gap: 15px;
+   overflow: hidden;
+
+   &:hover img{
+      transform: scale(1.3) translateY(11%);
+   }
+
+   @media (max-width:700px) {
+      max-width: 170px;
+      row-gap: 5px;
+   }
+}
+
+.product-card__img{
+   width: 295px;
+   height: 419px;
+   overflow: hidden;
+
+   @media (max-width:700px) {
+      width: 170px;
+      height: 244px;
+   }
+
+   @media (min-width: 1920px) {
+      width: 374px;
+      height: 531px;
+   }
+
+   img{
+      transition: all .2s ease-in;
+      object-fit: contain;
+      object-position: center top;
+   }
+}
+
+.rating-size__wrap{
+   display: flex;
+   justify-content: space-between;
+}
+
+.product-card__name{
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+
+   @media (max-width:700px) {
+      max-width: 170px;
+   }
+}
+
+
+.product-card__price{
+   color: $black;
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 2.1px;
+
+   @media (max-width:700px) {
+      font-size: 25px;
+   }
+
+   @media (min-width: 1920px) {
+      font-size: 30px;
+   }
+
+}
+
+.product-card__lable{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   left: -41px;
+   top: -17px;
+   width: 100px;
+   height: 50px;
+   color: $white;
+   background: $black;
+   padding-bottom: 3px;
+
+   transform: rotate(-45deg);
+
+
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 1.4px;
+
+    @media (min-width: 1920px) {
+      font-size: 14px;
+   }
+}
+
+.product-card__like{
+   position: absolute;
+   width: 35px;
+   height: 35px;
+
+   top: 15px;
+   right:15px;
+   background-image: url(../img/like/heart.png);
+   background-size: contain;
+
+   &:hover{
+      background-image: url(../img/like/like.png);
+   }
+}

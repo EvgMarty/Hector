@@ -1,0 +1,42 @@
+//Рейтинг  товара
+
+.product__rating-group{
+   display: flex;
+   column-gap: 8px;
+
+   @media (max-width:700px) {
+      column-gap: 2px;
+   }
+}
+
+.rating__input {
+   display: none;
+
+   &:checked +.rating__label{
+      background-image: url(../img/star/star_bg.svg);
+
+      &:hover{
+         opacity: 20%;
+      }
+   }
+}
+
+.rating__label{
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+  
+   background-image: url(../img/star/star.svg);
+   background-size: 100%;
+   background-position: 0 0;
+
+   &:hover{
+      background-image: url(../img/star/star_bg.svg);
+   }
+
+   
+   @media (min-width: 1920px) {
+      width: 27px;
+      height: 27px;
+   }
+}

@@ -1,5 +1,10 @@
 body{
+   position: relative;
    font-family: $montser;
+   
+   &.overflowHidden{
+      overflow: hidden;
+   }
 }
 
 .container{
@@ -12,6 +17,13 @@ body{
 
    @media (min-width: 1920px) {
       max-width: 1680px;
+   }
+}
+
+//Не принимать собития на картинку с класом no-pointer-events
+img{
+   &.no-pointer-events{
+      pointer-events: none;
    }
 }
 

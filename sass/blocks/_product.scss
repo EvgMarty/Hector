@@ -80,8 +80,29 @@
 .product__tab-content__wrap{
    padding-bottom: 70px;
 
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   column-gap: 40px;
+   row-gap: 70px;
+
+   @media (max-width: 700px) {
+      column-gap: 10px;
+      row-gap: 30px;
+   }
+
+   @media (min-width: 1920px) {
+      column-gap: 60px;
+      row-gap: 100px;
+   }
 }
 
 .product__card {
    height: 500px;
+}
+
+.product-carb__bot{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 5px;
 }

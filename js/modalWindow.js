@@ -3,6 +3,7 @@
 const dataModal = document.querySelectorAll('[data-modal]');
 const dataFade = document.querySelector('[data-fade]');
 const body = document.querySelector('body');
+const allModalWindow = document.querySelectorAll('.modal-window');
 
 dataModal.forEach((item)=>{
    item.addEventListener('click', (event)=>{
@@ -21,6 +22,11 @@ dataModal.forEach((item)=>{
          dataModalWindow.classList.add('hidden');
          dataFade.classList.add('hidden');
          body.classList.remove('overflowHidden');
+
+         //На всякий случай закрыть все модалки если открыто больше 2 
+         allModalWindow.forEach((item)=>{
+            item.classList.add('hidden');
+         })
       };
    })
 });

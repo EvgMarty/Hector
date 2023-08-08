@@ -535,15 +535,49 @@
    <!-- Модалки   -->
    <!-- Поиск   -->
    <div class="modal-window hidden" id="search">
-      <div class="modal__name">Пошук</div>
       <button class="close-bnt" data-close="modal"></button>
-      
+      <form class="search-form"> 
+         <button class="search-form__btn">
+            <img class="search-form__img" src="./img/icon/search.svg" alt="search" width="22px">
+         </button>
+         <input class="search-form__input" type="text" name="text" placeholder="Назва товару..."  required="">
+      </form>
+      <div class="search__wrap"></div>
    </div>
    <!-- Понрав   -->
    <div class="modal-window hidden" id="liked">
       <div class="modal__name">Сподобалося</div>
       <button class="close-bnt" data-close="modal"></button>
-
+      <div class="liked">
+         <div class="basket__card">
+            <div class="basket__card-img">
+               <img src="./img/catd/card.png" alt="">
+            </div>
+            <div class="basket__card-name">
+               <span>Футболка чоловіча Exclusive</span>
+            </div>
+            <div class="items ">
+               <button class="button btn-card">В кошик</button>
+            </div>
+            <div class="price">
+               <div class="price__currency">285 <b>₴</b></div>
+             </div>
+         </div>
+         <div class="basket__card">
+            <div class="basket__card-img">
+               <img src="./img/catd/card.png" alt="">
+            </div>
+            <div class="basket__card-name">
+               <span>Футболка чоловіча Exclusive</span>
+            </div>
+            <div class="items ">
+               <button class="button btn-card">В кошик</button>
+            </div>
+            <div class="price">
+               <div class="price__currency">285 <b>₴</b></div>
+             </div>
+         </div>
+      </div>
    </div>
    <!-- Корзина  -->
    <div class="modal-window hidden" id="basket">
@@ -589,10 +623,74 @@
       </div>
    </div>
    <!-- Регистрация   -->
-   <div class="modal-window hidden" id="office">
-      <div class="modal__name">Регестрація</div>
+   <div class="modal-window  hidden" id="office">
       <button class="close-bnt" data-close="modal"></button>
-     
+      <div class="office">
+         <div class="office__tab">
+            <button class="button tab--active" data-office="login">Логін</button>
+            <button class="button " data-office="registr">Реєстрація</button>
+         </div>
+         <div class="office__content" data-office-content id="login">
+            <form class="office__form">
+               <div class="office__form-group">
+                  <input type="email" class="office__form-input" name="email" placeholder=" " >
+                  <label class="office__form-lable" for="email">Введіть email</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="password" class="office__form-input" name="password" placeholder=" ">
+                  <label class="office__form-lable" for="password">Введіть пароль</label>
+               </div>
+               <button class="button formBtn">Увійти</button>
+               <span class="pass" data-modal="pass">забули пароль?</span>
+            </form>
+         </div>
+         <div class="office__content hidden" data-office-content id="registr">
+            <form class="office__form">
+               <div class="office__form-group">
+                  <input type="text" class="office__form-input" name="name" placeholder=" " >
+                  <label class="office__form-lable" for="name">Введіть ім'я</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="text" class="office__form-input" name="city" placeholder=" ">
+                  <label class="office__form-lable" for="city">Ваше Місто</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="number" class="office__form-input" name="number" placeholder=" ">
+                  <label class="office__form-lable" for="number">Введіть телефон</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="email" class="office__form-input" name="email" placeholder=" " >
+                  <label class="office__form-lable" for="email">Введіть email</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="text" class="office__form-input" name="password" placeholder=" ">
+                  <label class="office__form-lable" for="password">Введіть пароль</label>
+               </div>
+               <div class="office__form-group">
+                  <input type="text" class="office__form-input" name="passwordRep" placeholder=" ">
+                  <label class="office__form-lable" for="passwordRep">Підтвердіть пароль</label>
+               </div>
+               <button class="button formBtn">Зареєструватися</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <!-- Забил пароль -->
+   <div class="modal-window hidden" id="pass">
+      <button class="close-bnt" data-close="modal"></button>
+      <div class="office__name">Відновлення пароля</div>
+      <div class="office">
+         <div class="office__content" data-office-content id="login">
+            <form class="office__form">
+               <div class="office__form-group">
+                  <input type="email" class="office__form-input" name="email" placeholder=" " >
+                  <label class="office__form-lable" for="email">Введіть email</label>
+               </div>
+               <button class="button formBtn">Відновити</button>
+            </form>
+         </div>
+      </div>
    </div>
 
    <!-- Затемняющий фон   -->
@@ -604,6 +702,7 @@
    <script src="./js/slider.js"></script>
    <script src="./js/catalogTab.js"></script>
    <script src="./js/prodctTab.js"></script>
+   <script src="./js/formTab.js"></script>
    <script src="./js/articleTab.js"></script>
    <script src="./js/modalWindow.js"></script>
    <script src="./js/main.js"></script>

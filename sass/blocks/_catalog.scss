@@ -74,16 +74,16 @@
 .tab-wrap {
    display: flex;
    flex-wrap: wrap;
-   row-gap: 40px;
+   row-gap: 18px;
    column-gap: 40px;
    padding-bottom: 40px;
 
    border-bottom: 1px solid $black;
 
    .button{
-      width: 313px;
+      width: 344px;
       @media (max-width: 920px) {
-         width: 255px;
+         width: 284px;
       }
 
       &.tab--active{

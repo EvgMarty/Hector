@@ -19,6 +19,7 @@
 @import "./blocks/fadeBlock";  //Затемняющий блок
 @import "./blocks/button";  //Кнопка
 @import "./blocks/scrollbar";  //Скрол бар 
+@import "./blocks/subscriptionForms";  //Форма подписки
 @import "./blocks/forms";  //Форма
 @import "./blocks/productCard";  //Карточка товара
 @import "./blocks/productSize";  //Чекбокс рейтинга товара
@@ -27,3 +28,6 @@
 
 //Модалки
 @import "./blocks/basket";  //Корзина
+@import "./blocks/search";  //Поиск
+@import "./blocks/liked";  //Понравилось
+@import "./blocks/office";  //Кабинет

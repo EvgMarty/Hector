@@ -1,0 +1,52 @@
+.office {
+   padding: 25px;
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   row-gap: 40px;
+   align-items: center;
+}
+.office__tab {
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 20px;
+   row-gap: 20px;
+
+   .button{
+      width: 300px;
+      @media (max-width: 700px) {
+         width: 100%;
+      }
+
+      &.tab--active{
+         background: $black;
+         color: $white;
+      }
+
+   }
+}
+
+
+
+
+.office__content {
+   width: 85%;
+   &.hidden{
+      display: none;
+   }
+}
+
+.pass{
+   text-align: center;
+   cursor: pointer;
+   color: #878787;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   letter-spacing: 1.26px;
+   text-decoration-line: underline;
+}

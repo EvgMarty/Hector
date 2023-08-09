@@ -232,9 +232,9 @@ dataCardCategory.forEach((item)=>{
 
 
       if(datasetSubject == cardProductCategory){
-         const card =`<div class="product-card">
+         const card =`<div class="product-card card" data-id="${item.id}">
                         <div class="product-card__img">
-                           <img src="${item.img}" alt="">
+                           <img data-img src="${item.img}" alt="">
                         </div>
                         <div class="rating-size__wrap">
                            <!-- RATING -->
@@ -269,13 +269,13 @@ dataCardCategory.forEach((item)=>{
                               <label class="size__label" for="size-card-${item.id}_L">L</label>
                            </form>
                         </div>
-                        <p class="product-card__name">${item.name}</p>
+                        <p class="product-card__name" data-name >${item.name}</p>
                         <div class="product-carb__bot">
-                           <span class="product-card__price">${item.price}₴</span>
-                           <button class="button btn-card">В кошик</button>
+                           <span class="product-card__price" data-price >${item.price}</span>
+                           <button class="button btn-card" data-card >В кошик</button>
                         </div>
                         <span class="product-card__lable">${item.lable}</span>
-                        <button class="product-card__like"></button>
+                        <button class="product-card__like" data-like></button>
                      </div>`
          ;
          

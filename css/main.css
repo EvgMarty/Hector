@@ -1563,6 +1563,21 @@ h5 {
   letter-spacing: 0.98px;
 }
 
+.empty {
+  color: #636363;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26px;
+  padding: 15px;
+  width: 70%;
+  background: #000;
+  margin-top: 25px;
+  background: #f5f5f5;
+}
+.empty.hidden {
+  display: none;
+}
+
 .basket {
   position: relative;
   padding: 15px 0;
@@ -1579,6 +1594,9 @@ h5 {
   column-gap: 30px;
   bottom: -80px;
   right: 0;
+}
+.basket__price.hidden {
+  display: none;
 }
 .basket__price .all__price {
   font-size: 26px;

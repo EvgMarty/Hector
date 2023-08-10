@@ -547,6 +547,7 @@
    <!-- Понрав   -->
    <div class="modal-window hidden" id="liked">
       <div class="modal__name">Сподобалося</div>
+      <div class="empty ">порожньо</div>
       <button class="close-bnt" data-close="modal"></button>
       <div class="liked">
       </div>
@@ -554,9 +555,10 @@
    <!-- Корзина  -->
    <div class="modal-window hidden" id="basket">
       <div class="modal__name">Кошик</div>
+      <div class="empty ">порожньо</div>
       <button class="close-bnt" data-close="modal"></button>
       <div class="basket" >
-         <div class="basket__price">
+         <div class="basket__price hidden">
             <span class="all__price">500 <b>₴</b></span>
             <button class="button btn-card">Оформити замовлення</button>
          </div>
@@ -637,6 +639,8 @@
    <div class="fade-block hidden" data-fade="menu"></div>
 
    <script src="./js/productCardRender.js"></script>
+   <script src="./js/calcCardPrice.js"></script>
+   <script src="./js/cardStatus.js"></script>
    <script src="./js/menu.js"></script>
    <script src="./js/catalogCurtain.js"></script>
    <script src="./js/slider.js"></script>
